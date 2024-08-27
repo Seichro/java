@@ -1,21 +1,17 @@
-package switch_vars;
+package user_input;
+import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args)
 	{
-	String x = "water";
-	String y = "cool-aid";
-	
-	System.out.println("Strings before swap:");
-	System.out.println(x);
-	System.out.println(y);
-	String temp = x;
-	x = y;
-	y = temp;
-	
-	System.out.println("\nStrings after swap:");
-	System.out.println(x);
-	System.out.println(y);
-	
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("What is your name? ");
+		String name = scanner.nextLine();
+		System.out.println("How old are you? ");
+		int age = scanner.nextInt();
+		
+		System.out.println("Hello " + name);
+		System.out.println("Your age is " + age);
 	}
 }
